@@ -1,20 +1,25 @@
+import { Container } from "../../components/Container";
 import { Store } from "../../components/Store";
+
+import * as Styles from "./styles";
 
 export const Stores = () => {
   return (
-    <>
-      <Store
-        name="Pastel do Lekao"
-        status="aberto"
-        whatsapp="139132983"
-        instagram="@pastel.lekao"
-      />
-      <Store
-        name="Texas Burguer"
-        status="Aberto"
-        whatsapp="1123113223123"
-        instagram="@texas.burger"
-      />
-    </>
+    <Container>
+      <Styles.StoresList>
+        <Store
+          name="Pastel do Lekao"
+          whatsapp="139132983"
+          instagram="@pastel.lekao"
+          isOpen={true}
+        />
+        <Store
+          name="Texas Burguer"
+          whatsapp="1123113223123"
+          instagram="@texas.burger"
+          isOpen={false}
+        />
+      </Styles.StoresList>
+    </Container>
   );
 };

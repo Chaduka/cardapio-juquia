@@ -1,42 +1,48 @@
 import styled from "styled-components";
 
 export const Store = styled.div`
-  background: #e4e4de;
+  background: #fff;
+  border-radius: 8px;
   height: 250px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
-  border: 1px solid #000;
+  border: 1px solid #e0e0e0;
+  display: grid;
+  grid-template: min-content/3fr 7fr;
+  gap: 16px;
 `;
 
 export const H2 = styled.h2`
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   margin: 0;
 `;
 
 export const Name = styled.h2`
   font-weight: 500;
-  font-size: 32px;
+  font-size: 24px;
   margin: 0;
 `;
 
-export const Status = styled.div`
-  font-weight: 400;
-  font-size: 16px;
-  background: #595f39;
-  color: #fff;
-  padding: 5px;
-  border: 5px;
-  margin-top: 5px;
+export const StatusWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
 `;
 
-export const ImageWrapper = styled.div`
-  display: flex;
-  height: 100%;
+export const Status = styled.div<{ isOpen: boolean }>`
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: ${({ isOpen }) => (isOpen ? "#36a736" : "#d14545")};
 `;
 
 export const Image = styled.img`
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+`;
+
+export const Informations = styled.div`
+  padding: 16px 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 `;
